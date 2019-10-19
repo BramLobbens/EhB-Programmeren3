@@ -8,8 +8,8 @@ namespace Oefening1
 {
     public class Stapel<T>
     {
-        internal List<T> Values { get; set; }
-        public int Count { get; private set; } = 0;
+        private List<T> Values { get; set; }
+        public int Count { get => Values.Count; }
 
         public Stapel()
         {
@@ -19,7 +19,6 @@ namespace Oefening1
         public void Toevoegen(T t)
         {
             Values.Add(t);
-            Count++;
         }
 
         //Pop the first item from the list and return its value.
@@ -29,8 +28,6 @@ namespace Oefening1
             {
                 var first = Values.ElementAt(0);
                 Values.RemoveAt(0);
-                Count--;
-
                 return first;
             }
             return default;
@@ -40,7 +37,6 @@ namespace Oefening1
         public void Leegmaken()
         {
             Values.Clear();
-            Count = 0;
         }
 
         public bool IsAanwezig(T t)
@@ -53,16 +49,26 @@ namespace Oefening1
         {
             List<T> copy = Values.ConvertAll(value => value);
             Stapel<T> newStapel = new Stapel<T>();
-            foreach(var val in copy)
+            foreach (var val in copy)
             {
                 newStapel.Toevoegen(val);
             }
             return newStapel;
+            /*
+             * to use if implementing ICopyable
+             */
+            //var newStapel = new Stapel<T>();
+            //foreach (var val in Values)
+            //{
+            //    var copy = val.Copy();
+            //    newStapel.Toevoegen(val);
+            //}
+            //return newStapel;
         }
 
         public override string ToString()
         {
-            string s = "";
+            var s = "";
             Values.ForEach(val => s += val + "; ");
             return s;
         }
