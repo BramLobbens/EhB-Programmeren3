@@ -9,6 +9,7 @@ namespace Oefening1
     public class Stapel<T>
     {
         internal List<T> Values { get; set; }
+        public int Count { get; private set; } = 0;
 
         public Stapel()
         {
@@ -18,6 +19,7 @@ namespace Oefening1
         public void Toevoegen(T t)
         {
             Values.Add(t);
+            Count++;
         }
 
         //Pop the first item from the list and return its value.
@@ -27,6 +29,7 @@ namespace Oefening1
             {
                 var first = Values.ElementAt(0);
                 Values.RemoveAt(0);
+                Count--;
 
                 return first;
             }
@@ -37,6 +40,7 @@ namespace Oefening1
         public void Leegmaken()
         {
             Values.Clear();
+            Count = 0;
         }
 
         public bool IsAanwezig(T t)
@@ -44,7 +48,7 @@ namespace Oefening1
             return Values.Contains(t);
         }
 
-        //Make a Shallow copy of Values
+        //Make a deep copy of Values
         public Stapel<T> Copy()
         {
             List<T> copy = Values.ConvertAll(value => value);
@@ -58,7 +62,9 @@ namespace Oefening1
 
         public override string ToString()
         {
-            return Values.ToString();
+            string s = "";
+            Values.ForEach(val => s += val + "; ");
+            return s;
         }
 
     }

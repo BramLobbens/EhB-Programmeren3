@@ -21,7 +21,18 @@ namespace Oefening1
         void Foo()
         {
             var stapel = new Stapel<int>();
-            stapel.Toevoegen(5);
+            stapel.Toevoegen(1);
+            stapel.Toevoegen(2);
+            stapel.Toevoegen(3);
+
+            Console.WriteLine($"origineel: {stapel}");
+
+            var copy = stapel.Copy();
+            Console.WriteLine($"copy: {copy}");
+            copy.Verwijderen();
+
+            Console.WriteLine($"origineel: {stapel}");
+            Console.WriteLine($"copy: {copy}");
         }
     }
 }
