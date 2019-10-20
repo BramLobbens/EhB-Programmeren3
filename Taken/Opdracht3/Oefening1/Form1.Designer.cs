@@ -28,52 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.int_Field = new System.Windows.Forms.TextBox();
+            this.intStapel_ItemField = new System.Windows.Forms.TextBox();
+            this.intStapel_Field = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.string_Field = new System.Windows.Forms.TextBox();
+            this.stringStapel_ItemField = new System.Windows.Forms.TextBox();
+            this.title_Field = new System.Windows.Forms.TextBox();
+            this.bookStapel_ItemField = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.date_Field = new System.Windows.Forms.TextBox();
+            this.author_Field = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.stringStapel_Field = new System.Windows.Forms.TextBox();
+            this.bookStapel_Field = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // int_Field
             // 
-            this.textBox1.Location = new System.Drawing.Point(58, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.int_Field.Location = new System.Drawing.Point(58, 12);
+            this.int_Field.Name = "int_Field";
+            this.int_Field.Size = new System.Drawing.Size(100, 20);
+            this.int_Field.TabIndex = 0;
             // 
-            // textBox2
+            // intStapel_ItemField
             // 
-            this.textBox2.Location = new System.Drawing.Point(170, 12);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(189, 20);
-            this.textBox2.TabIndex = 99;
-            this.textBox2.TabStop = false;
+            this.intStapel_ItemField.Location = new System.Drawing.Point(170, 12);
+            this.intStapel_ItemField.Name = "intStapel_ItemField";
+            this.intStapel_ItemField.ReadOnly = true;
+            this.intStapel_ItemField.Size = new System.Drawing.Size(189, 20);
+            this.intStapel_ItemField.TabIndex = 99;
+            this.intStapel_ItemField.TabStop = false;
             // 
-            // textBox3
+            // intStapel_Field
             // 
-            this.textBox3.Location = new System.Drawing.Point(12, 202);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(432, 20);
-            this.textBox3.TabIndex = 99;
-            this.textBox3.TabStop = false;
+            this.intStapel_Field.Location = new System.Drawing.Point(12, 202);
+            this.intStapel_Field.Name = "intStapel_Field";
+            this.intStapel_Field.ReadOnly = true;
+            this.intStapel_Field.Size = new System.Drawing.Size(432, 20);
+            this.intStapel_Field.TabIndex = 99;
+            this.intStapel_Field.TabStop = false;
             // 
             // button1
             // 
@@ -95,48 +95,48 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox4
+            // string_Field
             // 
-            this.textBox4.Location = new System.Drawing.Point(58, 38);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 1;
+            this.string_Field.Location = new System.Drawing.Point(58, 38);
+            this.string_Field.Name = "string_Field";
+            this.string_Field.Size = new System.Drawing.Size(100, 20);
+            this.string_Field.TabIndex = 1;
             // 
-            // textBox5
+            // stringStapel_ItemField
             // 
-            this.textBox5.Location = new System.Drawing.Point(170, 38);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(189, 20);
-            this.textBox5.TabIndex = 99;
-            this.textBox5.TabStop = false;
+            this.stringStapel_ItemField.Location = new System.Drawing.Point(170, 38);
+            this.stringStapel_ItemField.Name = "stringStapel_ItemField";
+            this.stringStapel_ItemField.ReadOnly = true;
+            this.stringStapel_ItemField.Size = new System.Drawing.Size(189, 20);
+            this.stringStapel_ItemField.TabIndex = 99;
+            this.stringStapel_ItemField.TabStop = false;
             // 
-            // textBox6
+            // title_Field
             // 
-            this.textBox6.Location = new System.Drawing.Point(52, 19);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 2;
+            this.title_Field.Location = new System.Drawing.Point(52, 19);
+            this.title_Field.Name = "title_Field";
+            this.title_Field.Size = new System.Drawing.Size(100, 20);
+            this.title_Field.TabIndex = 2;
             // 
-            // textBox7
+            // bookStapel_ItemField
             // 
-            this.textBox7.Location = new System.Drawing.Point(170, 83);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox7.Size = new System.Drawing.Size(274, 72);
-            this.textBox7.TabIndex = 99;
-            this.textBox7.TabStop = false;
+            this.bookStapel_ItemField.Location = new System.Drawing.Point(170, 83);
+            this.bookStapel_ItemField.Multiline = true;
+            this.bookStapel_ItemField.Name = "bookStapel_ItemField";
+            this.bookStapel_ItemField.ReadOnly = true;
+            this.bookStapel_ItemField.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.bookStapel_ItemField.Size = new System.Drawing.Size(274, 72);
+            this.bookStapel_ItemField.TabIndex = 99;
+            this.bookStapel_ItemField.TabStop = false;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox9);
+            this.groupBox1.Controls.Add(this.date_Field);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox8);
+            this.groupBox1.Controls.Add(this.author_Field);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox6);
+            this.groupBox1.Controls.Add(this.title_Field);
             this.groupBox1.Location = new System.Drawing.Point(6, 64);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(158, 103);
@@ -144,19 +144,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Boek";
             // 
-            // textBox9
+            // date_Field
             // 
-            this.textBox9.Location = new System.Drawing.Point(52, 71);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 4;
+            this.date_Field.Location = new System.Drawing.Point(52, 71);
+            this.date_Field.Name = "date_Field";
+            this.date_Field.Size = new System.Drawing.Size(100, 20);
+            this.date_Field.TabIndex = 4;
             // 
-            // textBox8
+            // author_Field
             // 
-            this.textBox8.Location = new System.Drawing.Point(52, 45);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 3;
+            this.author_Field.Location = new System.Drawing.Point(52, 45);
+            this.author_Field.Name = "author_Field";
+            this.author_Field.Size = new System.Drawing.Size(100, 20);
+            this.author_Field.TabIndex = 3;
             // 
             // label1
             // 
@@ -203,42 +203,43 @@
             this.label5.TabIndex = 14;
             this.label5.Text = "Datum";
             // 
-            // textBox10
+            // stringStapel_Field
             // 
-            this.textBox10.Location = new System.Drawing.Point(12, 228);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(432, 20);
-            this.textBox10.TabIndex = 99;
-            this.textBox10.TabStop = false;
+            this.stringStapel_Field.Location = new System.Drawing.Point(12, 228);
+            this.stringStapel_Field.Name = "stringStapel_Field";
+            this.stringStapel_Field.ReadOnly = true;
+            this.stringStapel_Field.Size = new System.Drawing.Size(432, 20);
+            this.stringStapel_Field.TabIndex = 99;
+            this.stringStapel_Field.TabStop = false;
             // 
-            // textBox11
+            // bookStapel_Field
             // 
-            this.textBox11.Location = new System.Drawing.Point(12, 254);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(432, 20);
-            this.textBox11.TabIndex = 99;
-            this.textBox11.TabStop = false;
+            this.bookStapel_Field.Location = new System.Drawing.Point(12, 254);
+            this.bookStapel_Field.Name = "bookStapel_Field";
+            this.bookStapel_Field.ReadOnly = true;
+            this.bookStapel_Field.Size = new System.Drawing.Size(432, 20);
+            this.bookStapel_Field.TabIndex = 99;
+            this.bookStapel_Field.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(453, 280);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.bookStapel_Field);
+            this.Controls.Add(this.stringStapel_Field);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.bookStapel_ItemField);
+            this.Controls.Add(this.stringStapel_ItemField);
+            this.Controls.Add(this.string_Field);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.intStapel_Field);
+            this.Controls.Add(this.intStapel_ItemField);
+            this.Controls.Add(this.int_Field);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Opdracht3";
             this.groupBox1.ResumeLayout(false);
@@ -250,25 +251,25 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox int_Field;
+        private System.Windows.Forms.TextBox intStapel_ItemField;
+        private System.Windows.Forms.TextBox intStapel_Field;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox string_Field;
+        private System.Windows.Forms.TextBox stringStapel_ItemField;
+        private System.Windows.Forms.TextBox title_Field;
+        private System.Windows.Forms.TextBox bookStapel_ItemField;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox date_Field;
+        private System.Windows.Forms.TextBox author_Field;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox stringStapel_Field;
+        private System.Windows.Forms.TextBox bookStapel_Field;
     }
 }
 

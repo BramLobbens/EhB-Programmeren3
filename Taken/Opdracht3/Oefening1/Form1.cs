@@ -24,62 +24,71 @@ namespace Oefening1
         }
 
         // Zet op stapel
+        // Add the user input to each stapel and display all elements of each stapel.
         private void button1_Click(object sender, EventArgs e)
         {
             // Intstapel
-            if (textBox1.Text != "")
+            if (int_Field.Text != "")
             {
                 try
                 {
-                    IntStapel.Toevoegen(int.Parse(textBox1.Text));
-                    textBox3.Text = IntStapel.ToString();
-                    textBox1.Clear();
+                    IntStapel.Toevoegen(int.Parse(int_Field.Text));
+                    intStapel_Field.Text = IntStapel.ToString();
+                    int_Field.Clear();
                 }
                 catch (FormatException err)
                 {
                     Console.WriteLine(err.StackTrace);
-                    MessageBox.Show("Please provide an integer.");
+                    MessageBox.Show("Number should be an integer.", err.GetType().ToString());
+                }
+                catch (OverflowException err)
+                {
+                    Console.WriteLine(err.StackTrace);
+                    MessageBox.Show($"Number should be no bigger than {int.MaxValue}", err.GetType().ToString());
                 }
             }
 
             // Stringstapel
-            if (textBox4.Text != "")
+            if (string_Field.Text != "")
             {
-                StringStapel.Toevoegen(textBox4.Text);
-                textBox10.Text = StringStapel.ToString();
-                textBox4.Clear();
+                StringStapel.Toevoegen(string_Field.Text);
+                stringStapel_Field.Text = StringStapel.ToString();
+                string_Field.Clear();
             }
 
             // Bookstapel
-            if (textBox6.Text != "" || textBox8.Text != "" || textBox9.Text != "")
+            if (title_Field.Text != "" || author_Field.Text != "" || date_Field.Text != "")
             {
-                (string title, string author, string date) bookStrings = (textBox6.Text, textBox8.Text, textBox9.Text);
+                (string title, string author, string date) bookStrings = (title_Field.Text, author_Field.Text, date_Field.Text);
                 var book = new Book(bookStrings.title, bookStrings.author, bookStrings.date);
                 BookStapel.Toevoegen(book);
-                textBox11.Text = BookStapel.ToString();
-                textBox6.Clear();
-                textBox8.Clear();
-                textBox9.Clear();
+                bookStapel_Field.Text = BookStapel.ToString();
+                title_Field.Clear();
+                author_Field.Clear();
+                date_Field.Clear();
             }
         }
 
         // Haal van stapel
+        // Pop the first elements from each stapel. Display the popped element and display the remaining elements.
         private void button2_Click(object sender, EventArgs e)
         {
-            if (IntStapel.Count != 0)
             {
-                textBox2.Text = IntStapel.Verwijderen().ToString();
-                textBox3.Text = IntStapel.ToString();
+                var result = IntStapel.Verwijderen();
+                intStapel_ItemField.Text = result != 0 ? result.ToString() : "Stapel is leeg";
+                intStapel_Field.Text = IntStapel.ToString();
             }
-            if (StringStapel.Count != 0)
+            
             {
-                textBox5.Text = StringStapel.Verwijderen();
-                textBox10.Text = StringStapel.ToString();
+                var result = StringStapel.Verwijderen();
+                stringStapel_ItemField.Text = result ?? "Stapel is leeg";
+                stringStapel_Field.Text = StringStapel.ToString();
             }
-            if (BookStapel.Count != 0)
+
             {
-                textBox7.Text = BookStapel.Verwijderen().ToString();
-                textBox11.Text = BookStapel.ToString();
+                var result = BookStapel.Verwijderen();
+                bookStapel_ItemField.Text = result != null ? result.ToString() : "Stapel is leeg";
+                bookStapel_Field.Text = BookStapel.ToString();
             }
         }
     }

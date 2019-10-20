@@ -47,13 +47,18 @@ namespace Oefening1
         //Make a deep copy of Values
         public Stapel<T> Copy()
         {
-            List<T> copy = Values.ConvertAll(value => value);
-            Stapel<T> newStapel = new Stapel<T>();
+            var copy = Values.ConvertAll(value => value);
+            var newStapel = new Stapel<T>();
             foreach (var val in copy)
             {
                 newStapel.Toevoegen(val);
             }
             return newStapel;
+        }
+
+        [Obsolete("Method is not implemented. Use method Copy")]
+        public Stapel<T> Copy2()
+        {
             /*
              * to use if implementing ICopyable
              */
@@ -64,6 +69,7 @@ namespace Oefening1
             //    newStapel.Toevoegen(val);
             //}
             //return newStapel;
+            throw new NotImplementedException();
         }
 
         public override string ToString()
