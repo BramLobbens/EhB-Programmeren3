@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace CustomerOrders
@@ -83,9 +84,11 @@ namespace CustomerOrders
         {
             // Clear output
             resultListBox.Items.Clear();
+            // Clear current displayed list
+            currentDisplayed.Clear();
 
             AllOrders.ToList().ForEach(a => currentDisplayed.Add(a));
-            foreach (var order in AllOrders)
+            foreach (var order in currentDisplayed)
             {
                 resultListBox.Items.Add($"{order.OrderId}\t{order.Customer.Name}\t{order.TotalCost:C2}");
             }
@@ -98,10 +101,10 @@ namespace CustomerOrders
             // Clear output
             resultListBox.Items.Clear();
 
-            var results = from order in currentDisplayed//AllOrders
+            var results = from order in currentDisplayed
                           orderby order.TotalCost descending
                           select order;
-            //currentDisplayed = results.ToList();
+
             foreach (var order in results)
             {
                 resultListBox.Items.Add($"{order.OrderId}\t{order.Customer.Name}\t{order.TotalCost:C2}");
@@ -117,7 +120,9 @@ namespace CustomerOrders
             var results = from order in AllOrders
                           where order.Customer.Name.Equals(customerComboBox.SelectedItem)
                           select order;
+
             currentDisplayed = results.ToList();
+
             foreach (var order in results)
             {
                 resultListBox.Items.Add($"{order.OrderId}\t{order.Customer.Name}\t{order.TotalCost:C2}");
@@ -132,27 +137,39 @@ namespace CustomerOrders
 
             // Clear currency formatting
             var numText = greaterThanTextBox.Text;
-            String.Format("{0:N}", numText);
+            var cultureInfo = new System.Globalization.CultureInfo("nl-BE");
+
+            var regex = new Regex(@"([\d,.]+)");
+            var match = regex.Match(numText);
+            numText = match.Groups[1].Value;
 
             // Parse to decimal
             decimal num = 0;
             try
             {
-                num = Decimal.Parse(numText);
+                num = Decimal.Parse(numText, cultureInfo);
             }
             catch (FormatException err)
             {
                 Console.WriteLine(err.Message);
             }
 
-            var results = from order in currentDisplayed//AllOrders
+            var results = from order in currentDisplayed
                           where order.TotalCost > num
                           select order;
-            currentDisplayed = results.ToList();
-            foreach (var order in results)
+
+            if (!results.Any())
             {
-                resultListBox.Items.Add($"{order.OrderId}\t{order.Customer.Name}\t{order.TotalCost:C2}");
+                resultListBox.Items.Add("No result");
             }
+            else
+            {
+                foreach (var order in results)
+                {
+                    resultListBox.Items.Add($"{order.OrderId}\t{order.Customer.Name}\t{order.TotalCost:C2}");
+                }
+            }
+            
         }
     }
 }

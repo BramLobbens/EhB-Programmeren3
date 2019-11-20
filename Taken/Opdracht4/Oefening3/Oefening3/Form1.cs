@@ -18,6 +18,7 @@ namespace Oefening3
         private int LocationY { get; set; } // default = 0
         private Point RelativePoint { get; set; }
         private Color RectangleColor { get; set; }
+
         public Form1()
         {
             InitializeComponent();
@@ -133,13 +134,13 @@ namespace Oefening3
                     RectangleColor = form.Color;
                     UpdateToolStripStatus();
                 }
-            }
-                
+            }     
         }
 
         private void UpdateToolStripStatus()
         {
             toolStripStatusLabel1.Text = $"X: {RelativePoint.X}, Y: {RelativePoint.Y} | Color: {RectangleColor.Name}";
         }
+
     }
 }
