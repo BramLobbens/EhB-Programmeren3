@@ -28,10 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.countrySelection = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.currencyField = new System.Windows.Forms.TextBox();
+            this.adventureWorks2016CTP3DataSet = new UseAdventureWorks.AdventureWorks2016CTP3DataSet();
+            this.countryRegionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.countryRegionTableAdapter = new UseAdventureWorks.AdventureWorks2016CTP3DataSetTableAdapters.CountryRegionTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.adventureWorks2016CTP3DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countryRegionBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // countrySelection
@@ -69,6 +75,20 @@
             this.currencyField.Size = new System.Drawing.Size(121, 20);
             this.currencyField.TabIndex = 3;
             // 
+            // adventureWorks2016CTP3DataSet
+            // 
+            this.adventureWorks2016CTP3DataSet.DataSetName = "AdventureWorks2016CTP3DataSet";
+            this.adventureWorks2016CTP3DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // countryRegionBindingSource
+            // 
+            this.countryRegionBindingSource.DataMember = "CountryRegion";
+            this.countryRegionBindingSource.DataSource = this.adventureWorks2016CTP3DataSet;
+            // 
+            // countryRegionTableAdapter
+            // 
+            this.countryRegionTableAdapter.ClearBeforeFill = true;
+            // 
             // CurrencyLookupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -80,6 +100,9 @@
             this.Controls.Add(this.countrySelection);
             this.Name = "CurrencyLookupForm";
             this.Text = "UseAdventureWorks";
+            this.Load += new System.EventHandler(this.CurrencyLookupForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.adventureWorks2016CTP3DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countryRegionBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -91,6 +114,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox currencyField;
+        private AdventureWorks2016CTP3DataSet adventureWorks2016CTP3DataSet;
+        private System.Windows.Forms.BindingSource countryRegionBindingSource;
+        private AdventureWorks2016CTP3DataSetTableAdapters.CountryRegionTableAdapter countryRegionTableAdapter;
     }
 }
 

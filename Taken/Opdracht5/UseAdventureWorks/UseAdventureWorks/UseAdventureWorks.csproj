@@ -49,6 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdventureWorks2016CTP3DataSet.cs">
+      <DependentUpon>AdventureWorks2016CTP3DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="AdventureWorks2016CTP3DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

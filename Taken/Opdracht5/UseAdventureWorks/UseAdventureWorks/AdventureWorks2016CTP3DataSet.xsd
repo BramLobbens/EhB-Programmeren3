@@ -32,7 +32,7 @@ SELECT CountryRegionCode, Name COLLATE SQL_Latin1_General_CP1_CI_AS AS Expr1, Mo
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT CountryRegionCode, Name, ModifiedDate FROM Person.CountryRegion</CommandText>
                     <Parameters />
                   </DbCommand>
@@ -174,7 +174,7 @@ SELECT CurrencyCode, Name COLLATE SQL_Latin1_General_CP1_CI_AS AS Expr1, Modifie
   <xs:element name="AdventureWorks2016CTP3DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="AdventureWorks2016CTP3DataSet" msprop:Generator_UserDSName="AdventureWorks2016CTP3DataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="CountryRegion" msprop:Generator_TableClassName="CountryRegionDataTable" msprop:Generator_TableVarName="tableCountryRegion" msprop:Generator_TablePropName="CountryRegion" msprop:Generator_RowDeletingName="CountryRegionRowDeleting" msprop:Generator_RowChangingName="CountryRegionRowChanging" msprop:Generator_RowEvHandlerName="CountryRegionRowChangeEventHandler" msprop:Generator_RowDeletedName="CountryRegionRowDeleted" msprop:Generator_UserTableName="CountryRegion" msprop:Generator_RowChangedName="CountryRegionRowChanged" msprop:Generator_RowEvArgName="CountryRegionRowChangeEvent" msprop:Generator_RowClassName="CountryRegionRow">
+        <xs:element name="CountryRegion" msprop:Generator_TableClassName="CountryRegionDataTable" msprop:Generator_TableVarName="tableCountryRegion" msprop:Generator_RowChangedName="CountryRegionRowChanged" msprop:Generator_TablePropName="CountryRegion" msprop:Generator_RowDeletingName="CountryRegionRowDeleting" msprop:Generator_RowChangingName="CountryRegionRowChanging" msprop:Generator_RowEvHandlerName="CountryRegionRowChangeEventHandler" msprop:Generator_RowDeletedName="CountryRegionRowDeleted" msprop:Generator_RowClassName="CountryRegionRow" msprop:Generator_UserTableName="CountryRegion" msprop:Generator_RowEvArgName="CountryRegionRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CountryRegionCode" msprop:Generator_ColumnVarNameInTable="columnCountryRegionCode" msprop:Generator_ColumnPropNameInRow="CountryRegionCode" msprop:Generator_ColumnPropNameInTable="CountryRegionCodeColumn" msprop:Generator_UserColumnName="CountryRegionCode">
@@ -195,7 +195,7 @@ SELECT CurrencyCode, Name COLLATE SQL_Latin1_General_CP1_CI_AS AS Expr1, Modifie
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="CountryRegionCurrency" msprop:Generator_TableClassName="CountryRegionCurrencyDataTable" msprop:Generator_TableVarName="tableCountryRegionCurrency" msprop:Generator_TablePropName="CountryRegionCurrency" msprop:Generator_RowDeletingName="CountryRegionCurrencyRowDeleting" msprop:Generator_RowChangingName="CountryRegionCurrencyRowChanging" msprop:Generator_RowEvHandlerName="CountryRegionCurrencyRowChangeEventHandler" msprop:Generator_RowDeletedName="CountryRegionCurrencyRowDeleted" msprop:Generator_UserTableName="CountryRegionCurrency" msprop:Generator_RowChangedName="CountryRegionCurrencyRowChanged" msprop:Generator_RowEvArgName="CountryRegionCurrencyRowChangeEvent" msprop:Generator_RowClassName="CountryRegionCurrencyRow">
+        <xs:element name="CountryRegionCurrency" msprop:Generator_TableClassName="CountryRegionCurrencyDataTable" msprop:Generator_TableVarName="tableCountryRegionCurrency" msprop:Generator_RowChangedName="CountryRegionCurrencyRowChanged" msprop:Generator_TablePropName="CountryRegionCurrency" msprop:Generator_RowDeletingName="CountryRegionCurrencyRowDeleting" msprop:Generator_RowChangingName="CountryRegionCurrencyRowChanging" msprop:Generator_RowEvHandlerName="CountryRegionCurrencyRowChangeEventHandler" msprop:Generator_RowDeletedName="CountryRegionCurrencyRowDeleted" msprop:Generator_RowClassName="CountryRegionCurrencyRow" msprop:Generator_UserTableName="CountryRegionCurrency" msprop:Generator_RowEvArgName="CountryRegionCurrencyRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CountryRegionCode" msprop:Generator_ColumnVarNameInTable="columnCountryRegionCode" msprop:Generator_ColumnPropNameInRow="CountryRegionCode" msprop:Generator_ColumnPropNameInTable="CountryRegionCodeColumn" msprop:Generator_UserColumnName="CountryRegionCode">
@@ -216,7 +216,7 @@ SELECT CurrencyCode, Name COLLATE SQL_Latin1_General_CP1_CI_AS AS Expr1, Modifie
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Currency" msprop:Generator_TableClassName="CurrencyDataTable" msprop:Generator_TableVarName="tableCurrency" msprop:Generator_TablePropName="Currency" msprop:Generator_RowDeletingName="CurrencyRowDeleting" msprop:Generator_RowChangingName="CurrencyRowChanging" msprop:Generator_RowEvHandlerName="CurrencyRowChangeEventHandler" msprop:Generator_RowDeletedName="CurrencyRowDeleted" msprop:Generator_UserTableName="Currency" msprop:Generator_RowChangedName="CurrencyRowChanged" msprop:Generator_RowEvArgName="CurrencyRowChangeEvent" msprop:Generator_RowClassName="CurrencyRow">
+        <xs:element name="Currency" msprop:Generator_TableClassName="CurrencyDataTable" msprop:Generator_TableVarName="tableCurrency" msprop:Generator_RowChangedName="CurrencyRowChanged" msprop:Generator_TablePropName="Currency" msprop:Generator_RowDeletingName="CurrencyRowDeleting" msprop:Generator_RowChangingName="CurrencyRowChanging" msprop:Generator_RowEvHandlerName="CurrencyRowChangeEventHandler" msprop:Generator_RowDeletedName="CurrencyRowDeleted" msprop:Generator_RowClassName="CurrencyRow" msprop:Generator_UserTableName="Currency" msprop:Generator_RowEvArgName="CurrencyRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CurrencyCode" msprop:Generator_ColumnVarNameInTable="columnCurrencyCode" msprop:Generator_ColumnPropNameInRow="CurrencyCode" msprop:Generator_ColumnPropNameInTable="CurrencyCodeColumn" msprop:Generator_UserColumnName="CurrencyCode">
@@ -255,8 +255,8 @@ SELECT CurrencyCode, Name COLLATE SQL_Latin1_General_CP1_CI_AS AS Expr1, Modifie
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_CountryRegionCurrency_CountryRegion_CountryRegionCode" msdata:parent="CountryRegion" msdata:child="CountryRegionCurrency" msdata:parentkey="CountryRegionCode" msdata:childkey="CountryRegionCode" msprop:Generator_UserChildTable="CountryRegionCurrency" msprop:Generator_ChildPropName="GetCountryRegionCurrencyRows" msprop:Generator_UserRelationName="FK_CountryRegionCurrency_CountryRegion_CountryRegionCode" msprop:Generator_ParentPropName="CountryRegionRow" msprop:Generator_RelationVarName="relationFK_CountryRegionCurrency_CountryRegion_CountryRegionCode" msprop:Generator_UserParentTable="CountryRegion" />
-      <msdata:Relationship name="FK_CountryRegionCurrency_Currency_CurrencyCode" msdata:parent="Currency" msdata:child="CountryRegionCurrency" msdata:parentkey="CurrencyCode" msdata:childkey="CurrencyCode" msprop:Generator_UserChildTable="CountryRegionCurrency" msprop:Generator_ChildPropName="GetCountryRegionCurrencyRows" msprop:Generator_UserRelationName="FK_CountryRegionCurrency_Currency_CurrencyCode" msprop:Generator_RelationVarName="relationFK_CountryRegionCurrency_Currency_CurrencyCode" msprop:Generator_UserParentTable="Currency" msprop:Generator_ParentPropName="CurrencyRow" />
+      <msdata:Relationship name="FK_CountryRegionCurrency_CountryRegion_CountryRegionCode" msdata:parent="CountryRegion" msdata:child="CountryRegionCurrency" msdata:parentkey="CountryRegionCode" msdata:childkey="CountryRegionCode" msprop:Generator_UserChildTable="CountryRegionCurrency" msprop:Generator_ChildPropName="GetCountryRegionCurrencyRows" msprop:Generator_UserRelationName="FK_CountryRegionCurrency_CountryRegion_CountryRegionCode" msprop:Generator_RelationVarName="relationFK_CountryRegionCurrency_CountryRegion_CountryRegionCode" msprop:Generator_UserParentTable="CountryRegion" msprop:Generator_ParentPropName="CountryRegionRow" />
+      <msdata:Relationship name="FK_CountryRegionCurrency_Currency_CurrencyCode" msdata:parent="Currency" msdata:child="CountryRegionCurrency" msdata:parentkey="CurrencyCode" msdata:childkey="CurrencyCode" msprop:Generator_UserChildTable="CountryRegionCurrency" msprop:Generator_ChildPropName="GetCountryRegionCurrencyRows" msprop:Generator_UserRelationName="FK_CountryRegionCurrency_Currency_CurrencyCode" msprop:Generator_ParentPropName="CurrencyRow" msprop:Generator_RelationVarName="relationFK_CountryRegionCurrency_Currency_CurrencyCode" msprop:Generator_UserParentTable="Currency" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

@@ -14,20 +14,11 @@ namespace UseAdventureWorks
 {
     public partial class CurrencyLookupForm : Form
     {
-        private string _connectionString;
-        public string ConnectionString
-        {
-            get { return _connectionString; }
-            set { _connectionString = value; }
-        }
         
         public CurrencyLookupForm()
         {
             InitializeComponent();
         }
-
-        // TODO: populate countrySelection with rows from datatable
-        // DataReader
 
         // TODO: get user selection
         private void countrySelection_SelectedIndexChanged(object sender, EventArgs e)
@@ -35,13 +26,30 @@ namespace UseAdventureWorks
             // set selection and lookup and set currency in the textbox output
         }
 
-        private SqlConnection GetDbConnection()
+        private void CurrencyLookupForm_Load(object sender, EventArgs e)
         {
-            ConnectionString = UseAdventureWorks.Properties.Settings.Default.AdventureWorks2016CTP3ConnectionString;
-            return new SqlConnection(_connectionString);
-        }
 
-        // TO-DO read data with ADO.net (no use of ORM like entity)
-        // DataReader
+            using (var con = new SqlConnection(UseAdventureWorks.Properties.Settings.Default.AdventureWorks2016CTP3ConnectionString))
+            { 
+                try
+                {
+                    var query = "select Name from Person.CountryRegion";
+                    var da = new SqlDataAdapter(query, con);
+
+                    con.Open();
+
+                    var ds = new DataSet();
+                    da.Fill(ds, "ResultTable");
+
+                    countrySelection.DisplayMember = "Name";
+                    countrySelection.ValueMember = "Name";
+                    countrySelection.DataSource = ds.Tables["ResultTable"];
+                }
+                catch (Exception err)
+                {
+                    Console.WriteLine(err.Message);
+                }
+            }
+        }
     }
 }
