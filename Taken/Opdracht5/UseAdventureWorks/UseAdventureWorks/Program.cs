@@ -16,7 +16,10 @@ namespace UseAdventureWorks
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CurrencyLookupForm());
+
+            var form = new CurrencyLookupForm();
+            form.ConnectionString = UseAdventureWorks.Properties.Settings.Default.AdventureWorks2016CTP3ConnectionString;
+            Application.Run(form);
         }
     }
 }
